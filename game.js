@@ -464,7 +464,7 @@ class MentalHealthRunner {
             localStorage.setItem('mentalHealthCoins', this.totalCoins);
             const ownedData = {};
             Object.keys(this.outfits).forEach(k => { ownedData[k] = this.outfits[k].owned; });
-            localStorage.setItem('mentalHealthOwnedOutfits', JSON.stringify(ownedData)); ", "StartLine": 467, "TargetContent": "            localStorage.setItem('anatomyOwnedOutfits', JSON.stringify(ownedData));
+            localStorage.setItem('mentalHealthOwnedOutfits', JSON.stringify(ownedData));
             this.playSound('powerup');
             return true;
         }
