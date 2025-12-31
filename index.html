@@ -274,62 +274,121 @@
 
       <!-- Interactive Diagram Gallery equivalent -->
       <div class="diagram-gallery">
-        <h3 class="gallery-title">📸 Interactive Concepts <span class="gallery-hint">Click to explore</span></h3>
+        <h3 class="gallery-title">📸 Interactive Concepts <span class="gallery-hint">Click regions to explore</span></h3>
         <div class="gallery-grid">
-          <div class="diagram-card" data-diagram="maslow">
-            <div class="diagram-overlay"
-              style="background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-              🔺</div>
-            <div class="diagram-overlay">
+          
+          <!-- Maslow's Hierarchy - Interactive Image -->
+          <div class="diagram-card-interactive" data-diagram="maslow">
+            <img src="maslow_hierarchy.png" alt="Maslow's Hierarchy" usemap="#maslow-map" class="diagram-img-interactive">
+            <map name="maslow-map">
+              <area shape="poly" coords="200,20,300,20,280,70,220,70" alt="Self-Actualization" onclick="openDiagramHotspot('maslow', 'self-actualization')" title="Click to learn about Self-Actualization">
+              <area shape="poly" coords="180,75,320,75,310,125,190,125" alt="Esteem" onclick="openDiagramHotspot('maslow', 'esteem')" title="Click to learn about Esteem Needs">
+              <area shape="poly" coords="160,130,340,130,330,180,170,180" alt="Love & Belonging" onclick="openDiagramHotspot('maslow', 'belonging')" title="Click to learn about Love & Belonging">
+              <area shape="poly" coords="140,185,360,185,350,235,150,235" alt="Safety & Security" onclick="openDiagramHotspot('maslow', 'safety')" title="Click to learn about Safety & Security">
+              <area shape="poly" coords="120,240,380,240,370,290,130,290" alt="Physiological" onclick="openDiagramHotspot('maslow', 'physiological')" title="Click to learn about Physiological Needs">
+            </map>
+            <div class="diagram-overlay-info">
               <h4>Maslow's Hierarchy</h4>
-              <p>Physiological FIRST</p>
+              <p>Click pyramid levels</p>
             </div>
           </div>
-          <div class="diagram-card" data-diagram="freud">
-            <div class="diagram-overlay"
-              style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-              🧠</div>
-            <div class="diagram-overlay">
+
+          <!-- Freud - CSS Visual with Hotspots -->
+          <div class="diagram-card-interactive css-diagram" data-diagram="freud" onclick="openDiagramHotspot('freud', 'overview')">
+            <div class="freud-visual">
+              <div class="freud-layer superego" onclick="event.stopPropagation(); openDiagramHotspot('freud', 'superego')">
+                <span class="layer-icon">👼</span>
+                <span class="layer-title">SUPEREGO</span>
+              </div>
+              <div class="freud-layer ego" onclick="event.stopPropagation(); openDiagramHotspot('freud', 'ego')">
+                <span class="layer-icon">⚖️</span>
+                <span class="layer-title">EGO</span>
+              </div>
+              <div class="freud-layer id" onclick="event.stopPropagation(); openDiagramHotspot('freud', 'id')">
+                <span class="layer-icon">🔥</span>
+                <span class="layer-title">ID</span>
+              </div>
+            </div>
+            <div class="diagram-overlay-info">
               <h4>Freud's Structure</h4>
-              <p>Id, Ego, Superego</p>
+              <p>Click each layer</p>
             </div>
           </div>
-          <div class="diagram-card" data-diagram="erikson">
-            <div class="diagram-overlay"
-              style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-              👶</div>
-            <div class="diagram-overlay">
+
+          <!-- Erikson - CSS Timeline -->
+          <div class="diagram-card-interactive css-diagram" data-diagram="erikson" onclick="openDiagramHotspot('erikson', 'overview')">
+            <div class="erikson-timeline">
+              <div class="timeline-stage" onclick="event.stopPropagation(); openDiagramHotspot('erikson', 'trust')" title="Trust vs Mistrust">👶</div>
+              <div class="timeline-stage" onclick="event.stopPropagation(); openDiagramHotspot('erikson', 'autonomy')" title="Autonomy vs Shame">🧒</div>
+              <div class="timeline-stage" onclick="event.stopPropagation(); openDiagramHotspot('erikson', 'initiative')" title="Initiative vs Guilt">👧</div>
+              <div class="timeline-stage" onclick="event.stopPropagation(); openDiagramHotspot('erikson', 'industry')" title="Industry vs Inferiority">📚</div>
+              <div class="timeline-stage" onclick="event.stopPropagation(); openDiagramHotspot('erikson', 'identity')" title="Identity vs Confusion">👨</div>
+              <div class="timeline-stage" onclick="event.stopPropagation(); openDiagramHotspot('erikson', 'intimacy')" title="Intimacy vs Isolation">💑</div>
+              <div class="timeline-stage" onclick="event.stopPropagation(); openDiagramHotspot('erikson', 'generativity')" title="Generativity vs Stagnation">👨‍👩‍👧</div>
+              <div class="timeline-stage" onclick="event.stopPropagation(); openDiagramHotspot('erikson', 'integrity')" title="Integrity vs Despair">👴</div>
+            </div>
+            <div class="diagram-overlay-info">
               <h4>Erikson's Stages</h4>
-              <p>Trust vs Mistrust (Infant)</p>
+              <p>Click each stage</p>
             </div>
           </div>
-          <div class="diagram-card" data-diagram="peplau">
-            <div class="diagram-overlay"
-              style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-              🤝</div>
-            <div class="diagram-overlay">
-              <h4>Peplau's Theory</h4>
-              <p>Nurse-Client Relationship</p>
+
+          <!-- Therapeutic Communication -->
+          <div class="diagram-card-interactive css-diagram" data-diagram="communication" onclick="openDiagramHotspot('communication', 'overview')">
+            <div class="communication-grid">
+              <div class="comm-section therapeutic" onclick="event.stopPropagation(); openDiagramHotspot('communication', 'therapeutic')">
+                <span>✅</span>
+                <span>DO</span>
+              </div>
+              <div class="comm-section nontherapeutic" onclick="event.stopPropagation(); openDiagramHotspot('communication', 'nontherapeutic')">
+                <span>❌</span>
+                <span>AVOID</span>
+              </div>
+            </div>
+            <div class="diagram-overlay-info">
+              <h4>Communication</h4>
+              <p>Click sections</p>
             </div>
           </div>
-          <div class="diagram-card" data-diagram="rights">
-            <div class="diagram-overlay"
-              style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-              📜</div>
-            <div class="diagram-overlay">
-              <h4>Client Rights</h4>
-              <p>Autonomy & Refusal</p>
+
+          <!-- Defense Mechanisms -->
+          <div class="diagram-card-interactive css-diagram" data-diagram="defense" onclick="openDiagramHotspot('defense', 'overview')">
+            <div class="defense-categories">
+              <div class="defense-cat healthy" onclick="event.stopPropagation(); openDiagramHotspot('defense', 'healthy')">
+                <span>💚</span>
+                <span>Healthy</span>
+              </div>
+              <div class="defense-cat intermediate" onclick="event.stopPropagation(); openDiagramHotspot('defense', 'intermediate')">
+                <span>💛</span>
+                <span>Intermediate</span>
+              </div>
+              <div class="defense-cat immature" onclick="event.stopPropagation(); openDiagramHotspot('defense', 'immature')">
+                <span>❤️</span>
+                <span>Immature</span>
+              </div>
+            </div>
+            <div class="diagram-overlay-info">
+              <h4>Defense Mechanisms</h4>
+              <p>Click categories</p>
             </div>
           </div>
-          <div class="diagram-card" data-diagram="family">
-            <div class="diagram-overlay"
-              style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center; font-size: 3rem;">
-              👨‍👩‍👧</div>
-            <div class="diagram-overlay">
-              <h4>Family Dynamics</h4>
-              <p>Triangulation & Boundaries</p>
+
+          <!-- Mental Status Exam -->
+          <div class="diagram-card-interactive css-diagram" data-diagram="mse" onclick="openDiagramHotspot('mse', 'overview')">
+            <div class="mse-wheel">
+              <div class="mse-segment" onclick="event.stopPropagation(); openDiagramHotspot('mse', 'appearance')">👔</div>
+              <div class="mse-segment" onclick="event.stopPropagation(); openDiagramHotspot('mse', 'behavior')">🤝</div>
+              <div class="mse-segment" onclick="event.stopPropagation(); openDiagramHotspot('mse', 'speech')">🗣️</div>
+              <div class="mse-segment" onclick="event.stopPropagation(); openDiagramHotspot('mse', 'mood')">😊</div>
+              <div class="mse-segment" onclick="event.stopPropagation(); openDiagramHotspot('mse', 'thought')">💭</div>
+              <div class="mse-segment" onclick="event.stopPropagation(); openDiagramHotspot('mse', 'cognition')">🧠</div>
+            </div>
+            <div class="diagram-overlay-info">
+              <h4>Mental Status Exam</h4>
+              <p>Click components</p>
             </div>
           </div>
+
         </div>
 
         <div class="tabs" style="margin-top: 3rem;">

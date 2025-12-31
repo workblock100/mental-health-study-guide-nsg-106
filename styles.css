@@ -4458,3 +4458,368 @@ body.light-theme .main-tab.active {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
   padding: 1rem;
 }
+/* ========================================
+   INTERACTIVE DIAGRAM STYLES  
+   ======================================== */
+
+/* Interactive Diagram Cards */
+.diagram-card-interactive {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(30, 41, 59, 0.6));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  aspect-ratio: 1;
+}
+
+.diagram-card-interactive:hover {
+  transform: translateY(-8px);
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(99, 102, 241, 0.3);
+}
+
+/* Interactive Image-based Diagrams */
+.diagram-img-interactive {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-normal);
+}
+
+.diagram-card-interactive:hover .diagram-img-interactive {
+  transform: scale(1.05);
+}
+
+/* Image Map Area Hover Effect */
+area {
+  cursor: pointer;
+  outline: none;
+}
+
+area:hover {
+  opacity: 0.8;
+}
+
+/* Diagram Overlay Info */
+.diagram-overlay-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.diagram-overlay-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: white;
+}
+
+.diagram-overlay-info p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.diagram-card-interactive:hover .diagram-overlay-info {
+  background: linear-gradient(to top, rgba(99, 102, 241, 0.9), transparent);
+}
+
+/* ========================================
+   CSS-BASED DIAGRAM VISUALS
+   ======================================== */
+
+/* Freud's Structure Visual */
+.freud-visual {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 2px;
+}
+
+.freud-layer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.freud-layer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.freud-layer:hover::before {
+  opacity: 1;
+}
+
+.freud-layer.superego {
+  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+}
+
+.freud-layer.ego {
+  background: linear-gradient(135deg, #fde047 0%, #facc15 100%);
+}
+
+.freud-layer.id {
+  background: linear-gradient(135deg, #fca5a5 0%, #f87171 100%);
+}
+
+.freud-layer:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  z-index: 1;
+}
+
+.layer-icon {
+  font-size: 2rem;
+}
+
+.layer-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Erikson Timeline Visual */
+.erikson-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4px;
+  height: 100%;
+  padding: var(--space-sm);
+}
+
+.timeline-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(6, 182, 212, 0.2));
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-bounce);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-stage:hover {
+  transform: scale(1.15);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.5), rgba(6, 182, 212, 0.3));
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+  z-index: 1;
+}
+
+/* Communication Grid Visual */
+.communication-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  height: 100%;
+  padding: var(--space-md);
+}
+
+.comm-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.comm-section span:first-child {
+  font-size: 3.5rem;
+}
+
+.comm-section.therapeutic {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.2));
+  border: 2px solid rgba(16, 185, 129, 0.4);
+}
+
+.comm-section.nontherapeutic {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.3), rgba(220, 38, 38, 0.2));
+  border: 2px solid rgba(239, 68, 68, 0.4);
+}
+
+.comm-section:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+}
+
+/* Defense Mechanisms Categories Visual */
+.defense-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  padding: var(--space-md);
+}
+
+.defense-cat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.defense-cat span:first-child {
+  font-size: 2.5rem;
+}
+
+.defense-cat.healthy {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(5, 150, 105, 0.3));
+  border: 2px solid rgba(16, 185, 129, 0.5);
+}
+
+.defense-cat.intermediate {
+  background: linear-gradient(135deg, rgba(234, 179, 8, 0.4), rgba(202, 138, 4, 0.3));
+  border: 2px solid rgba(234, 179, 8, 0.5);
+}
+
+.defense-cat.immature {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.4), rgba(220, 38, 38, 0.3));
+  border: 2px solid rgba(239, 68, 68, 0.5);
+}
+
+.defense-cat:hover {
+  transform: translateX(8px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.2);
+}
+
+/* MSE Wheel Visual */
+.mse-wheel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
+  height: 100%;
+  padding: var(--space-md);
+}
+
+.mse-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(124, 58, 237, 0.2));
+  border-radius: 50%;
+  transition: all var(--transition-bounce);
+  cursor: pointer;
+  border: 2px solid rgba(139, 92, 246, 0.4);
+  aspect-ratio: 1;
+}
+
+.mse-segment:hover {
+  transform: scale(1.2) rotate(10deg);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(124, 58, 237, 0.4));
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.5);
+  z-index: 1;
+}
+
+/* Hotspot Modal Content Styling */
+.hotspot-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-md);
+  color: var(--primary-light);
+  border-bottom: 2px solid rgba(99, 102, 241, 0.3);
+  padding-bottom: var(--space-sm);
+}
+
+.diagram-modal-info h4 {
+  margin-top: var(--space-md);
+  color: var(--text-primary);
+}
+
+.diagram-modal-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.diagram-modal-info li {
+  margin-bottom: var(--space-sm);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.diagram-modal-info li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.diagram-modal-info strong {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+/* Responsive Adjustments for Interactive Diagrams */
+@media (max-width: 768px) {
+  .freud-layer {
+    font-size: 0.9rem;
+  }
+  
+  .layer-title {
+    font-size: 0.9rem;
+  }
+  
+  .erikson-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  .timeline-stage {
+    font-size: 2rem;
+  }
+  
+  .comm-section {
+    font-size: 1.2rem;
+  }
+  
+  .comm-section span:first-child {
+    font-size: 2.5rem;
+  }
+  
+  .defense-cat {
+    font-size: 1rem;
+  }
+  
+  .defense-cat span:first-child {
+    font-size: 2rem;
+  }
+  
+  .mse-segment {
+    font-size: 2rem;
+  }
+}
+
