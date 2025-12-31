@@ -4458,6 +4458,7 @@ body.light-theme .main-tab.active {
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
   padding: 1rem;
 }
+
 /* ========================================
    INTERACTIVE DIAGRAM STYLES  
    ======================================== */
@@ -4501,6 +4502,67 @@ area {
 
 area:hover {
   opacity: 0.8;
+}
+
+/* Maslow Pyramid Clickable Overlays */
+.maslow-pyramid-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pyramid-level {
+  position: absolute;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  z-index: 2;
+}
+
+.pyramid-level:hover {
+  background: rgba(99, 102, 241, 0.3);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
+}
+
+/* Position each pyramid level (trapezoid shapes) */
+.pyramid-level.level-5 {
+  /* Self-Actualization - Top */
+  left: 35%;
+  top: 5%;
+  width: 30%;
+  height: 15%;
+}
+
+.pyramid-level.level-4 {
+  /* Esteem - Second from top */
+  left: 30%;
+  top: 21%;
+  width: 40%;
+  height: 18%;
+}
+
+.pyramid-level.level-3 {
+  /* Love & Belonging - Middle */
+  left: 25%;
+  top: 40%;
+  width: 50%;
+  height: 18%;
+}
+
+.pyramid-level.level-2 {
+  /* Safety & Security - Second from bottom */
+  left: 20%;
+  top: 59%;
+  width: 60%;
+  height: 18%;
+}
+
+.pyramid-level.level-1 {
+  /* Physiological - Bottom (largest) */
+  left: 15%;
+  top: 78%;
+  width: 70%;
+  height: 18%;
 }
 
 /* Diagram Overlay Info */
@@ -4788,38 +4850,37 @@ area:hover {
   .freud-layer {
     font-size: 0.9rem;
   }
-  
+
   .layer-title {
     font-size: 0.9rem;
   }
-  
+
   .erikson-timeline {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
-  
+
   .timeline-stage {
     font-size: 2rem;
   }
-  
+
   .comm-section {
     font-size: 1.2rem;
   }
-  
+
   .comm-section span:first-child {
     font-size: 2.5rem;
   }
-  
+
   .defense-cat {
     font-size: 1rem;
   }
-  
+
   .defense-cat span:first-child {
     font-size: 2rem;
   }
-  
+
   .mse-segment {
     font-size: 2rem;
   }
 }
-

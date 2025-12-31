@@ -278,24 +278,22 @@
         </h3>
         <div class="gallery-grid">
 
-          <!-- Maslow's Hierarchy - Interactive Image -->
+          <!-- Maslow's Hierarchy - Interactive Image with Clickable Overlays -->
           <div class="diagram-card-interactive" data-diagram="maslow">
-            <img src="maslow_hierarchy.png" alt="Maslow's Hierarchy" usemap="#maslow-map"
-              class="diagram-img-interactive">
-            <map name="maslow-map">
-              <area shape="poly" coords="200,20,300,20,280,70,220,70" alt="Self-Actualization"
-                onclick="openDiagramHotspot('maslow', 'self-actualization')"
-                title="Click to learn about Self-Actualization">
-              <area shape="poly" coords="180,75,320,75,310,125,190,125" alt="Esteem"
-                onclick="openDiagramHotspot('maslow', 'esteem')" title="Click to learn about Esteem Needs">
-              <area shape="poly" coords="160,130,340,130,330,180,170,180" alt="Love & Belonging"
-                onclick="openDiagramHotspot('maslow', 'belonging')" title="Click to learn about Love & Belonging">
-              <area shape="poly" coords="140,185,360,185,350,235,150,235" alt="Safety & Security"
-                onclick="openDiagramHotspot('maslow', 'safety')" title="Click to learn about Safety & Security">
-              <area shape="poly" coords="120,240,380,240,370,290,130,290" alt="Physiological"
-                onclick="openDiagramHotspot('maslow', 'physiological')"
-                title="Click to learn about Physiological Needs">
-            </map>
+            <div class="maslow-pyramid-container">
+              <img src="maslow_hierarchy.png" alt="Maslow's Hierarchy" class="diagram-img-interactive">
+              <!-- Clickable pyramid level overlays -->
+              <div class="pyramid-level level-5" onclick="openDiagramHotspot('maslow', 'self-actualization')"
+                title="Click to learn about Self-Actualization"></div>
+              <div class="pyramid-level level-4" onclick="openDiagramHotspot('maslow', 'esteem')"
+                title="Click to learn about Esteem Needs"></div>
+              <div class="pyramid-level level-3" onclick="openDiagramHotspot('maslow', 'belonging')"
+                title="Click to learn about Love & Belonging"></div>
+              <div class="pyramid-level level-2" onclick="openDiagramHotspot('maslow', 'safety')"
+                title="Click to learn about Safety & Security"></div>
+              <div class="pyramid-level level-1" onclick="openDiagramHotspot('maslow', 'physiological')"
+                title="Click to learn about Physiological Needs"></div>
+            </div>
             <div class="diagram-overlay-info">
               <h4>Maslow's Hierarchy</h4>
               <p>Click pyramid levels</p>
