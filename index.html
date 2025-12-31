@@ -56,6 +56,10 @@
       <span class="main-tab-icon">📊</span>
       <span class="main-tab-text">Progress</span>
     </button>
+    <button class="main-tab" data-maintab="casestudy">
+      <span class="main-tab-icon">📋</span>
+      <span class="main-tab-text">Case Study</span>
+    </button>
     <button class="main-tab game-tab" data-maintab="game">
       <span class="main-tab-icon">🎮</span>
       <span class="main-tab-text">Play Game</span>
@@ -986,134 +990,6 @@
     </section>
   </div><!-- END PROGRESS TAB PANEL -->
 
-  <!-- Case Study Enhanced (standalone, always visible below tabs) -->
-  <section class="section" id="casestudy">
-    <div class="section-header">
-      <h2>📋 Case Study: Ms. Gloria</h2>
-      <p>Apply clinical reasoning to a real scenario: <strong>Acute Mania</strong></p>
-    </div>
-
-    <div class="case-layout">
-      <div class="case-sidebar">
-        <div class="patient-card">
-          <div class="patient-avatar">👩</div>
-          <h3>Gloria M.</h3>
-          <p>32 years old, Female</p>
-        </div>
-
-        <div class="case-info-card">
-          <h4>📋 Admitting Dx</h4>
-          <p>Bipolar I Disorder - Manic Episode</p>
-        </div>
-
-        <div class="case-info-card">
-          <h4>📚 PMH</h4>
-          <ul>
-            <li>Bipolar I (dx age 24)</li>
-            <li>Hypothyroidism</li>
-            <li>History of medication non-compliance</li>
-          </ul>
-        </div>
-
-        <div class="case-info-card">
-          <h4>🚶 Behavior</h4>
-          <p>Hyperactive, intrusive, pressured speech</p>
-        </div>
-      </div>
-
-      <div class="case-main">
-        <div class="case-timeline">
-          <div class="timeline-point admission">
-            <h4>Day 1: Admission</h4>
-            <div class="vitals-grid">
-              <div class="vital abnormal">BP: 158/92</div>
-              <div class="vital">Temp: 98.9°F</div>
-              <div class="vital abnormal">HR: 110</div>
-              <div class="vital">RR: 20</div>
-              <div class="vital">Sleep: 2h in 3 days</div>
-              <div class="vital abnormal">Wt: -5lbs</div>
-            </div>
-            <div class="orders">
-              <h5>Orders:</h5>
-              <ul>
-                <li>Lithium 300mg PO TID</li>
-                <li>Olanzapine 10mg IM PRN agitation</li>
-                <li>Finger_foods diet</li>
-              </ul>
-            </div>
-            <p class="progress-note">Pt pacing unit, singing loudly. Intrusive with other peers. "I am writing a
-              symphony for the President!" (Grandiosity). Refusing to sit for meals.</p>
-          </div>
-
-          <div class="timeline-point day3">
-            <h4>Day 3: Progress</h4>
-            <div class="vitals-grid">
-              <div class="vital normal">BP: 130/82</div>
-              <div class="vital">Temp: 98.6°F</div>
-              <div class="vital normal">HR: 88</div>
-              <div class="vital">Sleep: 5h</div>
-              <div class="vital">Lithium: 0.5</div>
-            </div>
-            <p class="progress-note">Less intrusive. Ate 75% of finger foods while walking. Accepted HS meds. Speech
-              still rapid but redirectable.</p>
-          </div>
-        </div>
-
-        <div class="case-questions">
-          <h3>🤔 Critical Thinking</h3>
-
-          <div class="case-question">
-            <h4>1. Why is "Finger Foods" ordered for Ms. Gloria?</h4>
-            <div class="answer-reveal" id="answer1">
-              <button class="reveal-btn">Reveal Answer</button>
-              <div class="answer-content">
-                <p><strong>Rationale:</strong></p>
-                <ul>
-                  <li>Manic patients are too hyperactive to sit for meals.</li>
-                  <li>Finger foods (sandwiches, fruit, nuggets) allow them to eat <strong>while moving</strong>.</li>
-                  <li>Prevents severe weight loss and metabolic collapse.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="case-question">
-            <h4>2. Which interaction is MOST therapeutic when she is intrusive?</h4>
-            <div class="answer-reveal" id="answer2">
-              <button class="reveal-btn">Reveal Answer</button>
-              <div class="answer-content">
-                <p><strong>Option:</strong> "Gloria, come with me to the quiet room for a walk."</p>
-                <p><strong>Why?</strong></p>
-                <ul>
-                  <li><strong>Distraction</strong> and <strong>Redirection</strong> are key.</li>
-                  <li>Setting firm limits ("Stop bothering him") can escalate aggression.</li>
-                  <li>Reduce stimuli (quiet room) to lower anxiety/mania.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="case-question">
-            <h4>3. Her Lithium level is 0.5 mEq/L. What is your action?</h4>
-            <div class="answer-reveal" id="answer3">
-              <button class="reveal-btn">Reveal Answer</button>
-              <div class="answer-content">
-                <p><strong>Action:</strong> Continue dosing as ordered.</p>
-                <p><strong>Rationale:</strong></p>
-                <ul>
-                  <li>Therapeutic range is 0.6 - 1.2 mEq/L.</li>
-                  <li>0.5 is sub-therapeutic (low), but building up. It is NOT toxic.</li>
-                  <li>Toxic signs (>1.5) would be coarse tremors, confusion, N/V.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
 
   <!-- Study Timer -->
   <section class="section" id="timer">
@@ -1161,6 +1037,135 @@
 
   <!-- Diagram Modal - Direct Body Child for Proper Fixed Positioning -->
 
+
+  <!-- CASE STUDY TAB PANEL -->
+  <div class="main-tab-panel" id="panel-casestudy">
+    <section class="section">
+      <div class="section-header">
+        <h2>📋 Case Study: Ms. Gloria</h2>
+        <p>Apply clinical reasoning to a real scenario: <strong>Acute Mania</strong></p>
+      </div>
+
+      <div class="case-layout">
+        <div class="case-sidebar">
+          <div class="patient-card">
+            <div class="patient-avatar">👩</div>
+            <h3>Gloria M.</h3>
+            <p>32 years old, Female</p>
+          </div>
+
+          <div class="case-info-card">
+            <h4>📋 Admitting Dx</h4>
+            <p>Bipolar I Disorder - Manic Episode</p>
+          </div>
+
+          <div class="case-info-card">
+            <h4>📚 PMH</h4>
+            <ul>
+              <li>Bipolar I (dx age 24)</li>
+              <li>Hypothyroidism</li>
+              <li>History of medication non-compliance</li>
+            </ul>
+          </div>
+
+          <div class="case-info-card">
+            <h4>🚶 Behavior</h4>
+            <p>Hyperactive, intrusive, pressured speech</p>
+          </div>
+        </div>
+
+        <div class="case-main">
+          <div class="case-timeline">
+            <div class="timeline-point admission">
+              <h4>Day 1: Admission</h4>
+              <div class="vitals-grid">
+                <div class="vital abnormal">BP: 158/92</div>
+                <div class="vital">Temp: 98.9°F</div>
+                <div class="vital abnormal">HR: 110</div>
+                <div class="vital">RR: 20</div>
+                <div class="vital">Sleep: 2h in 3 days</div>
+                <div class="vital abnormal">Wt: -5lbs</div>
+              </div>
+              <div class="orders">
+                <h5>Orders:</h5>
+                <ul>
+                  <li>Lithium 300mg PO TID</li>
+                  <li>Olanzapine 10mg IM PRN agitation</li>
+                  <li>Finger-foods diet</li>
+                </ul>
+              </div>
+              <p class="progress-note">Pt pacing unit, singing loudly. Intrusive with other peers. "I am writing a
+                symphony for the President!" (Grandiosity). Refusing to sit for meals.</p>
+            </div>
+
+            <div class="timeline-point day3">
+              <h4>Day 3: Progress</h4>
+              <div class="vitals-grid">
+                <div class="vital normal">BP: 130/82</div>
+                <div class="vital">Temp: 98.6°F</div>
+                <div class="vital normal">HR: 88</div>
+                <div class="vital">Sleep: 5h</div>
+                <div class="vital">Lithium: 0.5</div>
+              </div>
+              <p class="progress-note">Less intrusive. Ate 75% of finger foods while walking. Accepted HS meds. Speech
+                still rapid but redirectable.</p>
+            </div>
+          </div>
+
+          <div class="case-questions">
+            <h3>🤔 Critical Thinking</h3>
+
+            <div class="case-question">
+              <h4>1. Why is "Finger Foods" ordered for Ms. Gloria?</h4>
+              <div class="answer-reveal" id="answer1">
+                <button class="reveal-btn">Reveal Answer</button>
+                <div class="answer-content">
+                  <p><strong>Rationale:</strong></p>
+                  <ul>
+                    <li>Manic patients are too hyperactive to sit for meals.</li>
+                    <li>Finger foods (sandwiches, fruit, nuggets) allow them to eat <strong>while moving</strong>.</li>
+                    <li>Prevents severe weight loss and metabolic collapse.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-question">
+              <h4>2. Which interaction is MOST therapeutic when she is intrusive?</h4>
+              <div class="answer-reveal" id="answer2">
+                <button class="reveal-btn">Reveal Answer</button>
+                <div class="answer-content">
+                  <p><strong>Option:</strong> "Gloria, come with me to the quiet room for a walk."</p>
+                  <p><strong>Why?</strong></p>
+                  <ul>
+                    <li><strong>Distraction</strong> and <strong>Redirection</strong> are key.</li>
+                    <li>Setting firm limits ("Stop bothering him") can escalate aggression.</li>
+                    <li>Reduce stimuli (quiet room) to lower anxiety/mania.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-question">
+              <h4>3. Her Lithium level is 0.5 mEq/L. What is your action?</h4>
+              <div class="answer-reveal" id="answer3">
+                <button class="reveal-btn">Reveal Answer</button>
+                <div class="answer-content">
+                  <p><strong>Action:</strong> Continue dosing as ordered.</p>
+                  <p><strong>Rationale:</strong></p>
+                  <ul>
+                    <li>Therapeutic range is 0.6 - 1.2 mEq/L.</li>
+                    <li>0.5 is sub-therapeutic (low), but building up. It is NOT toxic.</li>
+                    <li>Toxic signs (>1.5) would be coarse tremors, confusion, N/V.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <!-- GAME TAB PANEL -->
   <div class="main-tab-panel" id="panel-game">
