@@ -320,12 +320,19 @@ function initDiagramModal() {
             const title = card.querySelector('h4').textContent;
             const desc = card.querySelector('p').textContent;
 
-            modalImage.src = img.src;
-            modalTitle.textContent = title;
-            modalInfo.innerHTML = `<p>${desc}</p>`; // You can expand this with more info if needed
+            // Only open modal if there's an actual image
+            if (img && img.src) {
+                modalImage.src = img.src;
+                modalTitle.textContent = title;
+                modalInfo.innerHTML = `<p>${desc}</p>`; // You can expand this with more info if needed
 
-            modal.classList.add('active'); // CSS should handle display:flex or similar
-            document.body.style.overflow = 'hidden';
+                modal.classList.add('active'); // CSS should handle display:flex or similar
+                document.body.style.overflow = 'hidden';
+            } else {
+                // For emoji-based cards without images, just show a visual effect
+                card.style.transform = 'scale(1.05)';
+                setTimeout(() => { card.style.transform = ''; }, 200);
+            }
         });
     });
 
