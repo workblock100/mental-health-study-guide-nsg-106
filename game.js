@@ -1848,13 +1848,13 @@ class MentalHealthRunner {
 
             this.ctx.font = '900 80px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
             this.ctx.textAlign = 'center';
-            this.ctx.fillText('MSK REVIEW RUNNER', this.centerX, this.height * 0.22);
+            this.ctx.fillText('MENTAL HEALTH RUNNER', this.centerX, this.height * 0.22);
             this.ctx.shadowBlur = 0;
 
             // Subtitle
             this.ctx.fillStyle = '#94a3b8';
             this.ctx.font = '500 28px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-            this.ctx.fillText('Musculoskeletal Nursing Study Guide', this.centerX, this.height * 0.30);
+            this.ctx.fillText('Mental Health Units 1 & 2 Study Guide', this.centerX, this.height * 0.30);
 
             // Stats Card - Larger and Cleaner
             const statsW = 600;
