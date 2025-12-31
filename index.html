@@ -500,7 +500,49 @@
         <p>Key disorders and interventions</p>
       </div>
 
-      <div class="tabs">
+      <!-- Interactive Diagram Gallery -->
+      <div class="diagram-gallery">
+        <h3 class="gallery-title">📸 Interactive Concept Gallery <span class="gallery-hint">Click to explore</span></h3>
+        <div class="gallery-grid">
+          <div class="diagram-card" data-diagram="maslow">
+            <img src="maslow.png" alt="Maslow's Hierarchy" class="diagram-img">
+            <div class="diagram-overlay">
+              <h4>Maslow's Hierarchy</h4>
+              <p>Prioritizing patient needs</p>
+            </div>
+          </div>
+          <div class="diagram-card" data-diagram="synapse">
+            <img src="synapse.png" alt="Neurotransmitters" class="diagram-img">
+            <div class="diagram-overlay">
+              <h4>Synaptic Transmission</h4>
+              <p>Action of psych meds</p>
+            </div>
+          </div>
+          <div class="diagram-card" data-diagram="anxiety">
+            <img src="anxiety.png" alt="Anxiety Levels" class="diagram-img">
+            <div class="diagram-overlay">
+              <h4>Anxiety vs Performance</h4>
+              <p>Mild to Panic levels</p>
+            </div>
+          </div>
+          <div class="diagram-card" data-diagram="mse">
+            <img src="mse.png" alt="Mental Status Exam" class="diagram-img">
+            <div class="diagram-overlay">
+              <h4>Mental Status Exam</h4>
+              <p>Key assessment areas</p>
+            </div>
+          </div>
+          <div class="diagram-card" data-diagram="lithium">
+            <img src="lithium.png" alt="Lithium Toxicity" class="diagram-img">
+            <div class="diagram-overlay">
+              <h4>Lithium Levels</h4>
+              <p>Therapeutic vs Toxic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs" style="margin-top: 3rem;">
         <button class="tab active" data-tab="anxiety">Anxiety</button>
         <button class="tab" data-tab="depression">Depression</button>
         <button class="tab" data-tab="legal">Legal/Ethical</button>
@@ -1013,37 +1055,35 @@
   <!-- Case Study Enhanced (standalone, always visible below tabs) -->
   <section class="section" id="casestudy">
     <div class="section-header">
-      <h2>📋 Case Study: Mr. Charles</h2>
-      <p>Apply clinical reasoning to a real scenario</p>
+      <h2>📋 Case Study: Ms. Gloria</h2>
+      <p>Apply clinical reasoning to a real scenario: <strong>Acute Mania</strong></p>
     </div>
 
     <div class="case-layout">
       <div class="case-sidebar">
         <div class="patient-card">
-          <div class="patient-avatar">👴</div>
-          <h3>Nathan Charles</h3>
-          <p>75 years old, Male</p>
+          <div class="patient-avatar">👩</div>
+          <h3>Gloria M.</h3>
+          <p>32 years old, Female</p>
         </div>
 
         <div class="case-info-card">
           <h4>📋 Admitting Dx</h4>
-          <p>Pneumonia</p>
+          <p>Bipolar I Disorder - Manic Episode</p>
         </div>
 
         <div class="case-info-card">
           <h4>📚 PMH</h4>
           <ul>
-            <li>Parkinson's disease</li>
-            <li>HTN</li>
-            <li>CHF</li>
-            <li>Hypercholesterolemia</li>
-            <li>DJD (bilateral knees)</li>
+            <li>Bipolar I (dx age 24)</li>
+            <li>Hypothyroidism</li>
+            <li>History of medication non-compliance</li>
           </ul>
         </div>
 
         <div class="case-info-card">
-          <h4>🚶 Mobility</h4>
-          <p>Uses walker, very unsteady</p>
+          <h4>🚶 Behavior</h4>
+          <p>Hyperactive, intrusive, pressured speech</p>
         </div>
       </div>
 
@@ -1052,35 +1092,36 @@
           <div class="timeline-point admission">
             <h4>Day 1: Admission</h4>
             <div class="vitals-grid">
-              <div class="vital abnormal">BP: 140/90</div>
-              <div class="vital abnormal">Temp: 100.4°F</div>
-              <div class="vital">HR: 98</div>
-              <div class="vital abnormal">RR: 24</div>
-              <div class="vital abnormal">O2: 93% RA</div>
-              <div class="vital">WBC: 9.4</div>
+              <div class="vital abnormal">BP: 158/92</div>
+              <div class="vital">Temp: 98.9°F</div>
+              <div class="vital abnormal">HR: 110</div>
+              <div class="vital">RR: 20</div>
+              <div class="vital">Sleep: 2h in 3 days</div>
+              <div class="vital abnormal">Wt: -5lbs</div>
             </div>
             <div class="orders">
               <h5>Orders:</h5>
               <ul>
-                <li>O2 2L NC</li>
-                <li>Azithromycin IV → PO</li>
-                <li>Consult PT/OT</li>
+                <li>Lithium 300mg PO TID</li>
+                <li>Olanzapine 10mg IM PRN agitation</li>
+                <li>Finger_foods diet</li>
               </ul>
             </div>
+            <p class="progress-note">Pt pacing unit, singing loudly. Intrusive with other peers. "I am writing a
+              symphony for the President!" (Grandiosity). Refusing to sit for meals.</p>
           </div>
 
           <div class="timeline-point day3">
             <h4>Day 3: Progress</h4>
             <div class="vitals-grid">
-              <div class="vital normal">BP: 130/80</div>
-              <div class="vital normal">Temp: 98.2°F</div>
-              <div class="vital">HR: 88</div>
-              <div class="vital">RR: 22</div>
-              <div class="vital normal">O2: 97% RA</div>
-              <div class="vital normal">WBC: 7.4</div>
+              <div class="vital normal">BP: 130/82</div>
+              <div class="vital">Temp: 98.6°F</div>
+              <div class="vital normal">HR: 88</div>
+              <div class="vital">Sleep: 5h</div>
+              <div class="vital">Lithium: 0.5</div>
             </div>
-            <p class="progress-note">Ambulating with walker + supervision. Appetite improved. Hallway walks with PT x2
-              daily.</p>
+            <p class="progress-note">Less intrusive. Ate 75% of finger foods while walking. Accepted HS meds. Speech
+              still rapid but redirectable.</p>
           </div>
         </div>
 
@@ -1088,50 +1129,48 @@
           <h3>🤔 Critical Thinking</h3>
 
           <div class="case-question">
-            <h4>1. Why is Mr. Charles at HIGH risk for immobility complications?</h4>
+            <h4>1. Why is "Finger Foods" ordered for Ms. Gloria?</h4>
             <div class="answer-reveal" id="answer1">
               <button class="reveal-btn">Reveal Answer</button>
               <div class="answer-content">
-                <p><strong>Multiple factors compound his risk:</strong></p>
+                <p><strong>Rationale:</strong></p>
                 <ul>
-                  <li><strong>Parkinson's</strong> → baseline mobility impairment, increased fall risk</li>
-                  <li><strong>DJD (knees)</strong> → pain with movement, reluctance to ambulate</li>
-                  <li><strong>Pneumonia</strong> → fatigue, weakness, need for bedrest</li>
-                  <li><strong>Age 75</strong> → sarcopenia, decreased physiological reserve</li>
-                  <li><strong>CHF</strong> → already compromised cardiac output</li>
+                  <li>Manic patients are too hyperactive to sit for meals.</li>
+                  <li>Finger foods (sandwiches, fruit, nuggets) allow them to eat <strong>while moving</strong>.</li>
+                  <li>Prevents severe weight loss and metabolic collapse.</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div class="case-question">
-            <h4>2. What assessment tools would you implement?</h4>
+            <h4>2. Which interaction is MOST therapeutic when she is intrusive?</h4>
             <div class="answer-reveal" id="answer2">
               <button class="reveal-btn">Reveal Answer</button>
               <div class="answer-content">
+                <p><strong>Option:</strong> "Gloria, come with me to the quiet room for a walk."</p>
+                <p><strong>Why?</strong></p>
                 <ul>
-                  <li><strong>Braden Scale</strong> — pressure ulcer risk (immobility)</li>
-                  <li><strong>Fall Risk Assessment</strong> — Parkinson's + unsteady gait</li>
-                  <li><strong>Pain Scale</strong> — DJD may limit mobility</li>
-                  <li><strong>Morse Fall Scale</strong> — Walker use, history of falls</li>
-                  <li><strong>Respiratory assessment</strong> — Pneumonia progression</li>
+                  <li><strong>Distraction</strong> and <strong>Redirection</strong> are key.</li>
+                  <li>Setting firm limits ("Stop bothering him") can escalate aggression.</li>
+                  <li>Reduce stimuli (quiet room) to lower anxiety/mania.</li>
                 </ul>
               </div>
             </div>
           </div>
 
           <div class="case-question">
-            <h4>3. What are your PRIORITY nursing interventions?</h4>
+            <h4>3. Her Lithium level is 0.5 mEq/L. What is your action?</h4>
             <div class="answer-reveal" id="answer3">
               <button class="reveal-btn">Reveal Answer</button>
               <div class="answer-content">
-                <ol>
-                  <li><strong>Early mobilization</strong> — PT consult, progressive ambulation</li>
-                  <li><strong>DVT prophylaxis</strong> — SCDs, anticoagulants if ordered</li>
-                  <li><strong>Respiratory</strong> — IS Q1H while awake, turn/cough/deep breathe</li>
-                  <li><strong>Skin protection</strong> — Turn Q2H, pressure-relieving surface</li>
-                  <li><strong>Fall prevention</strong> — Call light in reach, bed alarm, walker accessible</li>
-                </ol>
+                <p><strong>Action:</strong> Continue dosing as ordered.</p>
+                <p><strong>Rationale:</strong></p>
+                <ul>
+                  <li>Therapeutic range is 0.6 - 1.2 mEq/L.</li>
+                  <li>0.5 is sub-therapeutic (low), but building up. It is NOT toxic.</li>
+                  <li>Toxic signs (>1.5) would be coarse tremors, confusion, N/V.</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1139,6 +1178,8 @@
       </div>
     </div>
   </section>
+
+
 
   <!-- Study Timer -->
   <section class="section" id="timer">
@@ -1185,6 +1226,16 @@
   </footer>
 
   <!-- Diagram Modal - Direct Body Child for Proper Fixed Positioning -->
+
+
+  <!-- GAME TAB PANEL -->
+  <div class="main-tab-panel" id="panel-game">
+    <div class="game-fullscreen-container">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+  </div>
+
+  <!-- Diagram Modal -->
   <div id="diagramModal" class="diagram-modal-overlay">
     <div class="diagram-modal-scroll" onclick="if(event.target===this)closeImageModal()">
       <div class="diagram-modal-content">
@@ -1194,17 +1245,9 @@
         </div>
         <div class="diagram-modal-image-container">
           <img id="modalImage" src="" alt="">
-          <div id="hotspotsLayer" class="diagram-hotspots"></div>
         </div>
         <div id="modalInfo" class="diagram-modal-info"></div>
       </div>
-    </div>
-  </div>
-
-  <!-- GAME TAB PANEL -->
-  <div class="main-tab-panel" id="panel-game">
-    <div class="game-fullscreen-container">
-      <canvas id="gameCanvas"></canvas>
     </div>
   </div>
 

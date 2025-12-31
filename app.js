@@ -303,8 +303,59 @@ function initTabs() {
     });
 }
 
+// Diagram Modal
+function initDiagramModal() {
+    const modal = document.getElementById('diagramModal');
+    if (!modal) return;
+
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalInfo = document.getElementById('modalInfo');
+
+    // Open Modal
+    document.querySelectorAll('.diagram-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const diagramType = card.dataset.diagram;
+            const img = card.querySelector('img');
+            const title = card.querySelector('h4').textContent;
+            const desc = card.querySelector('p').textContent;
+
+            modalImage.src = img.src;
+            modalTitle.textContent = title;
+            modalInfo.innerHTML = `<p>${desc}</p>`; // You can expand this with more info if needed
+
+            modal.classList.add('active'); // CSS should handle display:flex or similar
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close Modal Helper
+    window.closeImageModal = function () {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    };
+}
+
+// Case Study Logic
+function initCaseStudy() {
+    document.querySelectorAll('.reveal-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            const parent = this.closest('.answer-reveal');
+            if (parent) {
+                parent.classList.add('revealed'); // CSS needs to show .answer-content
+                this.style.display = 'none'; // Hide the button
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initMainTabs();
     initFlashcards();
     initTabs();
+    initDiagramModal();
+    initCaseStudy();
+
+    // Force Learn Tab Active on Load to prevent "missing tabs" issue
+    switchMainTab('learn');
 });
