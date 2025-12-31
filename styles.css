@@ -217,8 +217,10 @@ h4 {
   transform: translateY(-8px) scale(1.02);
 }
 
-/* Navigation */
+/* Navigation - HIDDEN: Using main-tabs as primary navigation now */
 .nav {
+  display: none;
+  /* Hidden - main-tabs is now primary navigation */
   position: fixed;
   top: 0;
   left: 0;
@@ -2976,7 +2978,7 @@ h4 {
   background: rgba(15, 23, 42, 0.98);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transform: translateY(-100%);
+  /* Removed transform: translateY(-100%) - tabs should always be visible */
   transition: transform 0.3s ease;
 }
 
@@ -4349,6 +4351,7 @@ body.light-theme .main-tab.active {
     grid-template-columns: 1fr;
   }
 }
+
 /* ============================================
    INTERACTIVE ELEMENTS RESTORATION
    ============================================ */
@@ -4452,6 +4455,6 @@ body.light-theme .main-tab.active {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
   padding: 1rem;
 }
